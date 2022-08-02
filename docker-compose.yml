@@ -1,0 +1,19 @@
+services:
+
+  pg:
+    image: postgres:13
+    restart: always
+    ports:
+      - 5432:5432
+    env_file:
+      - ./docker/postgres/.env
+
+  spider:
+    build: .
+    container_name: ss_scrapy
+    ports:
+      - 9000:9000
+    env_file:
+      - ./docker/scrapy/.env
+    links:
+      - mysql

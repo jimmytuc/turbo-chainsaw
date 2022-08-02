@@ -1,4 +1,4 @@
-## ServiceSite Crawler
+## Crawler
 
 Python 3
 Scrapy 2.6.2
@@ -16,7 +16,7 @@ The test database is located at docker/mysql/test.sql 。
 
 ### Usage
 -------
-    $ cd ./ScrapyDouban/docker
+    $ cd ./scrapy/docker
     $ sudo docker-compose up --build -d
     # 进入 douban_scrapyd 容器
     $ sudo docker exec -it douban_scrapyd bash
@@ -32,7 +32,7 @@ The test database is located at docker/mysql/test.sql 。
     $ scrapy crawl book_meta # 收集书籍元数据
     $ scrapy crawl book_comment # 收集书籍评论
 
-If you want to easily modify the code during testing, you can mount the scrapy directory of the project path to the servicesite_scrapyd container.
+If you want to easily modify the code during testing, you can mount the scrapy directory of the project path to the scrapyd container.
 
-If you are used to working with scrapyd, you can deploy the project directly to the servicesite_scrapyd container through scrapyd-client.
+If you are used to working with scrapyd, you can deploy the project directly to the scrapyd container through scrapyd-client.
 # turbo-chainsaw
