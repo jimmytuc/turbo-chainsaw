@@ -95,10 +95,10 @@ AUTOTHROTTLE_ENABLED = True
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 DATABASE = {
-    "drivername": "postgres",
-    "host": os.environ["POSTGRES_HOST"],
-    "port": os.environ["POSTGRES_PORT"],
-    "username": os.environ["POSTGRES_USER"],
-    "password": os.environ["POSTGRES_PASS"],
-    "database": os.environ["POSTGRES_DB"],
+    'drivername': 'postgres',
+    'host': os.environ['POSTGRES_HOST'],
+    'port': os.environ['POSTGRES_PORT'],
+    'username': os.environ['POSTGRES_USER'],
+    'password': os.environ['POSTGRES_PASS'],
+    'database': os.environ['POSTGRES_DB'],
 }

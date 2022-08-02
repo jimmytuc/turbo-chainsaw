@@ -8,16 +8,9 @@ Base = declarative_base()
 
 
 def db_connect() -> Engine:
-    """
-    Creates database connection using database settings from settings.py.
-    Returns sqlalchemy engine instance
-    """
     return create_engine(URL(**settings.DATABASE))
 
 def create_table(engine: Engine):
-    """
-    Create a table
-    """
     Base.metadata.create_all(engine)
 
 class Pages(Base):
