@@ -26,18 +26,3 @@ class ClonetSiteSpider(CrawlSpider):
     """
     def parse_item(self, response):
         title = response.xpath('//title/text()').extract()
-        
-
-
-        douban_id = response.url.split("/")[-2]
-        items = json.loads(response.body)["interests"]
-        for item in items:
-            comment = Comment()
-            comment["douban_id"] = douban_id
-            comment["douban_comment_id"] = item["id"]
-            comment["douban_user_nickname"] = item["user"]["name"]
-            comment["douban_user_avatar"] = item["user"]["avatar"]
-            comment["douban_user_url"] = item["user"]["url"]
-            comment["content"] = item["comment"]
-            comment["votes"] = item["vote_count"]
-            yield comment
